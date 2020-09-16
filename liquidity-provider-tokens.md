@@ -110,7 +110,7 @@ cleos -u https://eos.newdex.one push action lptoken.defi update '["BOXL","eostes
 cleos -u https://eos.newdex.one push action lptoken.defi claim '["eostestuser1"]' -p eostestuser1
 ```
 
-#### 更新所以流动池并领取奖励
+#### 更新所有流动池奖励并领取
 参数：
 | 字段       | 类型     | 说明         |
 | ---------- | -------- | ------------ |
