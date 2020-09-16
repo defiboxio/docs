@@ -67,7 +67,7 @@ curl -X POST -d '{"code":"lptoken.defi","scope":"BOXL","table":"userinfo","json"
 
 ### 接入真实做市凭证(Liquidity Provider)
 
-接入真实做市凭证需要开发者接收并保管LP，此LP是取回用户在Defibox做市资金的唯一凭证，相当重要。第三方应用如抵押类应用可以代替资产直接使用。
+接入真实做市凭证需要开发者接收并保管LP，此LP是取回用户在Defibox做市资金的唯一凭证，相当重要。第三方应用（如借贷类应用）可以代替资产当作抵押物直接使用。
 
 #### BOX挖矿奖励的分配
 
@@ -115,7 +115,7 @@ cleos -u https://eos.newdex.one push action lptoken.defi claim '["eostestuser1"]
 | 字段       | 类型     | 说明         |
 | ---------- | -------- | ------------ |
 | owner | name | 要领取奖励的用户 |
-| offset | symbol_code | 从哪个币开始领取，不填可留空 |
+| offset | symbol_code | 从哪个币开始更新，不填则从第一个持有币种开始 |
 | limit | uint16_t | 更新池子的最大数量 |
 
 示例：
