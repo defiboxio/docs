@@ -65,7 +65,7 @@ curl -X POST -d '{"code":"lptoken.defi","scope":"BOXL","table":"userinfo","json"
 | liquidity | uint64_t | 做市凭证数量                     |
 | debt      | uint64_t | 用于记录已领奖励的数值（可忽略） |
 
-### 接入直实做市凭证(Liquidity Provider)
+### 接入真实做市凭证(Liquidity Provider)
 
 接入真实做市凭证需要开发者接收并保管LP，此LP是取回用户在Defibox做市资金的唯一凭证，相当重要。第三方应用如抵押类应用可以代替资产直接使用。
 
@@ -73,7 +73,7 @@ curl -X POST -d '{"code":"lptoken.defi","scope":"BOXL","table":"userinfo","json"
 
 在Defibox做市可享受做市挖矿的BOX奖励，但BOX奖励只分配给LP持有者，如果LP发生转移，系统会马上结算，之后的奖励将归属于新的LP持有者。接入做市凭证的难点在于如何二次分配这些奖励。
 
-奖励在用户没有操作的时候不会分配，只有用户余额发生变化（转入或者转出都可以）或者用户主动去更新奖励才会进行分配。分配后的数量会在reward表中，具体信息如下：
+奖励在用户没有操作的时候不会分配，只有用户余额发生变化（转入或者转出都可以）或者用户主动去更新奖励才会进行分配。分配后的数量会存在reward表中，需要用户手动领取奖励，具体信息如下：
 
 合约名：lptoken.defi
 
