@@ -93,6 +93,7 @@ Scope: lptoken.defi
 | ---------- | -------- | ------------ |
 | code      | symbol_code     | 币名，例如 BOXL       |
 | owner | name | 要领取奖励的用户 |
+
 示例：
 ```shell
 cleos -u https://eos.newdex.one push action lptoken.defi update '["BOXL","eostestuser1"]' -p eostestuser1
@@ -103,6 +104,7 @@ cleos -u https://eos.newdex.one push action lptoken.defi update '["BOXL","eostes
 | 字段       | 类型     | 说明         |
 | ---------- | -------- | ------------ |
 | owner | name | 要领取奖励的用户 |
+
 示例：
 ```shell
 cleos -u https://eos.newdex.one push action lptoken.defi claim '["eostestuser1"]' -p eostestuser1
@@ -115,6 +117,7 @@ cleos -u https://eos.newdex.one push action lptoken.defi claim '["eostestuser1"]
 | owner | name | 要领取奖励的用户 |
 | offset | symbol_code | 从哪个币开始领取 |
 | limit | uint16_t | 更新池子的最大数量 |
+
 示例：
 ```shell
 cleos -u https://eos.newdex.one push action lptoken.defi update '["BOXL","",10]' -p claimall
