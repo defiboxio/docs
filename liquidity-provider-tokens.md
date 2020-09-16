@@ -115,12 +115,12 @@ cleos -u https://eos.newdex.one push action lptoken.defi claim '["eostestuser1"]
 | 字段       | 类型     | 说明         |
 | ---------- | -------- | ------------ |
 | owner | name | 要领取奖励的用户 |
-| offset | symbol_code | 从哪个币开始领取 |
+| offset | symbol_code | 从哪个币开始领取，不填可留空 |
 | limit | uint16_t | 更新池子的最大数量 |
 
 示例：
 ```shell
-cleos -u https://eos.newdex.one push action lptoken.defi update '["BOXL","",10]' -p claimall
+cleos -u https://eos.newdex.one push action lptoken.defi claimall '["eostestuser1","BOXA",10]' -p eostestuser1
 ```
 
 特别说明：因为EOS网络的特性，执行过于复杂的运算会导致交易失败，因此offset配合limit可以分批次执行。
